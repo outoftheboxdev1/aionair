@@ -114,7 +114,8 @@ export const getTotalPodcastsOfUser = query({
       .unique();
 
     if (!user) {
-      throw new ConvexError("User not found");
+      //throw new ConvexError("User not found");
+      return null;
     }
 
     return user.totalPodcasts;
