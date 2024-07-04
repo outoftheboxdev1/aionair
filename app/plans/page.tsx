@@ -242,7 +242,7 @@ export default function Payments() {
                         {
                           // display billed annually if the planDetails.endsOn date is greater than 30 days from now
                           planDetails.endsOn! >
-                          Date.now() + 30 * 24 * 60 * 60 * 1000 ? (
+                          Date.now() + 31 * 24 * 60 * 60 * 1000 ? (
                             <span className="inline-flex me-2 items-center text-xs text-gray-300 bg-gray-700  rounded-full py-0.5 px-2.5">
                               Billed annually
                             </span>
