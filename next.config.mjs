@@ -7,6 +7,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "incredible-impala-661.convex.cloud",
+      },
+      {
+        protocol: "https",
         hostname: "befitting-owl-165.convex.cloud",
       },
       {

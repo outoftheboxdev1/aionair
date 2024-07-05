@@ -9,10 +9,16 @@ import ProfileCard from "@/components/ProfileCard";
 import { api } from "@/convex/_generated/api";
 import { ProfilePodcastProps } from "@/types";
 import { useClerk } from "@clerk/nextjs";
-
+import { usePathname, useRouter } from 'next/navigation';
+import Image from "next/image";
+import { Button } from "../../../components/ui/button";
+//https://accounts.youpoder.com/user
 const MyProfilePage = () => {
 
   const { user } = useClerk();
+
+  const pathname = usePathname();
+  const router = useRouter();
 
   const podcastsData = useQuery(api.podcasts.getPodcastByAuthorId, {
     authorId: user?.id!,
@@ -32,6 +38,18 @@ const MyProfilePage = () => {
           imageUrl={user?.imageUrl!}
           userFirstName={user.firstName!}
         />
+          <Button
+            onClick={() => router.push('https://accounts.youpoder.com/user')}
+            className="text-16 bg-[--accent-color] font-extrabold text-white-1 lg:mt-7 md:mt-7"
+          >
+            <Image
+              src="/icons/edit.svg"
+              width={20}
+              height={20}
+              alt="edit profile"
+            />{" "}
+            &nbsp; Edit Profile
+          </Button>
       </div>
       <section className="mt-9 flex flex-col gap-5">
         <h1 className="text-20 font-bold text-white-1">All Podcasts</h1>
