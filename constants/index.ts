@@ -23,6 +23,16 @@ export const sidebarLinks = [
     imgURL: "/icons/chart.svg",
     route: "/plans",
     label: "Billing & Usage",
+  },
+  {
+    imgURL: "/icons/right-arrow.svg",
+    route: "/terms",
+    label: "Terms of Service",
+  },
+  {
+    imgURL: "/icons/right-arrow.svg",
+    route: "/privacy-policy",
+    label: "Privacy Policy",
   }
 ];
 
