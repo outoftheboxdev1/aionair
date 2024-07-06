@@ -34,7 +34,6 @@ export default defineSchema({
     endsOn: v.optional(v.number()),
     plan: v.optional(v.string()),
     totalPodcasts: v.number(),
-    verified: v.optional(v.number()),
   })
     .index("by_clerkId", ["clerkId"])
     .index("by_subscriptionId", ["subscriptionId"]),
