@@ -7,7 +7,7 @@ import { PodcastProps, ProfileCardProps } from "@/types";
 
 import LoaderSpinner from "./LoaderSpinner";
 import { Button } from "./ui/button";
-import { useIsSubscribed, useGetPlan } from "@/hooks/useIsSubscribed";
+import { useIsSubscribed, useIsVerified, useGetPlan } from "@/hooks/useIsSubscribed";
 
 type planDetails = {
   subscriptionId: string;
@@ -59,6 +59,7 @@ const ProfileCard = ({
       />
       <div className="flex flex-col justify-center max-md:items-center">
         <div className="flex flex-col gap-2.5">
+          {isSubscribed && (
           <figure className="flex gap-2 max-md:justify-center">
             <Image
               src="/icons/verified.svg"
@@ -70,6 +71,7 @@ const ProfileCard = ({
               Verified Creator
             </h2>
           </figure>
+          )}
           <div className="flex gap-4 items-center justify-stretch">
             <h1 className="text-32 font-extrabold mr-2 tracking-[-0.32px] text-white-1">
               {userFirstName}
