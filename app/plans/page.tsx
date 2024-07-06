@@ -59,7 +59,7 @@ export default function Payments() {
    */
 
   const podcastsRemaining =
-    planDetails.plan === "Enterprise"
+    planDetails.plan === "ENTERPRISE"
       ? "unlimited"
       : ((30 - totalPodcasts!) as number);
 
