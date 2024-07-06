@@ -32,6 +32,7 @@ const ProfileCard = ({
   };
 
   const isSubscribed = useIsSubscribed(profileId);
+  const isVerified = useIsVerified(profileId);
   const { plan } = useGetPlan(profileId) as planDetails;
 
   useEffect(() => {
@@ -59,7 +60,7 @@ const ProfileCard = ({
       />
       <div className="flex flex-col justify-center max-md:items-center">
         <div className="flex flex-col gap-2.5">
-          {isSubscribed && (
+          {isVerified && (
           <figure className="flex gap-2 max-md:justify-center">
             <Image
               src="/icons/verified.svg"
