@@ -30,7 +30,7 @@ export function useIsVerified(id: string) {
     setIsFetching(false);
   }, [user]);
 
-  if (!user || user.verified !== 1) return false;
+  if (!user || !user.verified) return false;
 
   return true;
 }
