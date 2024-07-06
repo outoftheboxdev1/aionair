@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "stripe:listen": "stripe listen --forward-to https://youthful-seahorse-517.convex.site/stripe",
+    "stripe:listen": "stripe listen --forward-to https://incredible-impala-661.convex.site/stripe",
     "stripe:trigger": "stripe trigger payment_intent.succeeded"
   },
   "dependencies": {
