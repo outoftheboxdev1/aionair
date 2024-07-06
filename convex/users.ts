@@ -105,6 +105,26 @@ export const getSubscriptionByClerkId = query({
 //   },
 // });
 
+export const getVerifiedByClerkId = query({
+  args: { clerkId: v.string() },
+  handler: async (ctx, args) : Promise<{ verified: number | undefined } | null | undefined> =>
+  {
+    const user = await ctx.db
+      .query("users")
+      .filter((q) => q.eq(q.field("clerkId"), args.clerkId))
+      .first();
+
+    if (!user) {
+      return null;
+    }
+
+    return {
+      verified: user.verified,
+    };
+  },
+});
+
+
 export const getTotalPodcastsOfUser = query({
   args: { clerkId: v.string() },
   handler: async (ctx, args) => {
