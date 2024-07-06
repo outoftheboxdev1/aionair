@@ -7,7 +7,7 @@ import { PodcastProps, ProfileCardProps } from "@/types";
 
 import LoaderSpinner from "./LoaderSpinner";
 import { Button } from "./ui/button";
-import { useIsSubscribed, useIsVerified, useGetPlan } from "@/hooks/useIsSubscribed";
+import { useIsSubscribed, useGetPlan } from "@/hooks/useIsSubscribed";
 
 type planDetails = {
   subscriptionId: string;
@@ -32,7 +32,6 @@ const ProfileCard = ({
   };
 
   const isSubscribed = useIsSubscribed(profileId);
-  const isVerified = useIsVerified(profileId);
   const { plan } = useGetPlan(profileId) as planDetails;
 
   useEffect(() => {
@@ -60,7 +59,7 @@ const ProfileCard = ({
       />
       <div className="flex flex-col justify-center max-md:items-center">
         <div className="flex flex-col gap-2.5">
-          {isVerified && (
+          {isSubscribed && (
           <figure className="flex gap-2 max-md:justify-center">
             <Image
               src="/icons/verified.svg"

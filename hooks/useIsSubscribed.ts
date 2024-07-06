@@ -19,21 +19,21 @@ export function useIsSubscribed(id: string) {
   return user?.endsOn > Date.now();
 }
 
-export function useIsVerified(id: string) {
+// export function useIsVerified(id: string) {
 
-  const { setIsFetching } = useIsFetching();
+//   const { setIsFetching } = useIsFetching();
 
-  const user = useQuery(api.users.getVerifiedByClerkId, { clerkId: id }); // will be undefined if fetching and null if no subscription or user
+//   const user = useQuery(api.users.getVerifiedByClerkId, { clerkId: id }); // will be undefined if fetching and null if no subscription or user
 
-  useEffect(() => {
-    if (user === undefined) return;
-    setIsFetching(false);
-  }, [user]);
+//   useEffect(() => {
+//     if (user === undefined) return;
+//     setIsFetching(false);
+//   }, [user]);
 
-  if (!user || !user.verified) return false;
+//   if (!user || !user.verified) return false;
 
-  return true;
-}
+//   return true;
+// }
 
 export function useGetPlan(id: string) {
 
