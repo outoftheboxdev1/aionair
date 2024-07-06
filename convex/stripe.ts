@@ -142,9 +142,9 @@ export const createCustomerPortal = action({
       customer: customerId!,
       return_url:
         process.env.HOSTING_URL ??
-        `http://localhost:3000/plans?session_id={BILLING_PORTAL_SESSION_ID}`,
+        `https://youpoder.com/plans?session_id={BILLING_PORTAL_SESSION_ID}`,
     });
-
+    //`http://localhost:3000/plans?session_id={BILLING_PORTAL_SESSION_ID}`
     return session.url;
   },
 });
