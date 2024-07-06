@@ -74,7 +74,7 @@ export const getSubscriptionByClerkId = query({
   {
     const user = await ctx.db
       .query("users")
-      .filter((q) => q.eq(q.field("clerkId"), args.clerkId))
+      .withIndex("by_clerkId", (q) => q.eq("clerkId", args.clerkId))
       .first();
 
     if (!user) {
@@ -111,7 +111,7 @@ export const getVerifiedByClerkId = query({
   {
     const user = await ctx.db
       .query("users")
-      .filter((q) => q.eq(q.field("clerkId"), args.clerkId))
+      .withIndex("by_clerkId", (q) => q.eq("clerkId", args.clerkId))
       .first();
 
     if (!user) {
