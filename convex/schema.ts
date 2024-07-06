@@ -21,6 +21,7 @@ export default defineSchema({
     audioDuration: v.number(),
     views: v.number(),
   })
+    .index("by_authorId", ["authorId"])
     .searchIndex("search_author", { searchField: "author" })
     .searchIndex("search_title", { searchField: "podcastTitle" })
     .searchIndex("search_body", { searchField: "podcastDescription" }),

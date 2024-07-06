@@ -75,7 +75,7 @@ const privacyPolicy = () => {
                 <li><strong>Deletion:</strong> You can request the deletion of your personal information.</li>
                 <li><strong>Opt-Out:</strong> You can opt-out of receiving promotional emails from us.</li>
             </ul>
-            <p>To exercise these rights, please contact us at [insert contact email].</p>
+            <p>To exercise these rights, please contact us at george@outoftheboxdev.com.</p>
 
             <h2 className='text-3xl mb-4 mt-4'>6. Third-Party Links</h2>
             <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these third-party sites.</p>

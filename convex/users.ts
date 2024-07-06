@@ -184,6 +184,7 @@ export const getTopUserByPodcastCount = query({
       user.map(async (u) => {
         const podcasts = await ctx.db
           .query("podcasts")
+          .withIndex("by_authorId", (q) => q.eq("authorId", u.clerkId))
           .filter((q) => q.eq(q.field("authorId"), u.clerkId))
           .collect();
 
