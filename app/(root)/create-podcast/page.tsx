@@ -80,13 +80,13 @@ const CreatePodcast = () => {
     try {
       setIsSubmitting(true);
 
-      if(!audioUrl || !imageUrl || !voiceType) {
-        toast({
-          title: 'Please generate audio and image',
-        })
-        setIsSubmitting(false);
-        throw new Error('Please generate audio and image')
-      }
+      // if(!audioUrl || !imageUrl || !voiceType) {
+      //   toast({
+      //     title: 'Please generate audio and image',
+      //   })
+      //   setIsSubmitting(false);
+      //   throw new Error('Please generate audio and image')
+      // }
 
       const podcast = await createPodcast({
         podcastTitle: data.podcastTitle,
@@ -106,11 +106,11 @@ const CreatePodcast = () => {
       router.push('/')
     } catch (error : any) {
       console.error(error.message);
-      toast({
-        title: 'Error',
-        description: error.message? error.message : "Unknown error",
-        variant: 'destructive',
-      })
+      // toast({
+      //   title: 'Error',
+      //   description: error.message? error.message : "Unknown error",
+      //   variant: 'destructive',
+      // })
       setIsSubmitting(false);
     }
   }

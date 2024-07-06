@@ -26,7 +26,7 @@ export const pay = action({
       throw new Error("You must provide a plan to subscribe to!");
     }
 
-    const domain = process.env.HOSTING_URL ?? "http://localhost:3000";
+    const domain = process.env.HOSTING_URL ?? "http://youpoder.com";
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
       apiVersion: "2024-04-10",
     });
