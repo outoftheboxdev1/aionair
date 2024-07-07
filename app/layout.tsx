@@ -9,11 +9,15 @@ import IsFetchingProvider  from "@/providers/IsFetchingProvider";
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "YouPoderAI",
-  description: "Generate podcasts in different languages on the fly using AI",
+  title: "YouPoder.com - Create Multilingual Podcasts Instantly with AI",
+  description: "Create multilingual podcasts instantly with AI. YouPoder lets you generate high-quality podcasts in various languages on the fly, enhancing global reach and engagement.",
   icons: {
     icon: '/icons/miclogo.svg'
-  }
+  },
+  keywords: ["podcast", "generate podcast", "create podcast with ai", "multilingual podcasts"],
+  openGraph: {
+    images: '/images/podcast-ai.png',
+  },
 };
 
 export default function RootLayout({
