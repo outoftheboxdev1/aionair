@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   keywords: ["podcast", "generate podcast", "create podcast with ai", "multilingual podcasts"],
   openGraph: {
-    images: '/podcast-ai.PNG',
+    images: '/opengraph-image.PNG',
   },
 };
 
