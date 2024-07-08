@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "YouPoder.com - Create Multilingual Podcasts Instantly with AI",
   description: "Create multilingual podcasts instantly with AI. YouPoder lets you generate high-quality podcasts in various languages on the fly, enhancing global reach and engagement.",
   icons: {
-    icon: '/icons/miclogo.svg'
+    icon: 'https://i.imgur.com/5HnglSS.png'
   },
   keywords: ["podcast", "generate podcast", "create podcast with ai", "multilingual podcasts"],
   openGraph: {
